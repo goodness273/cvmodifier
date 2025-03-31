@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV Modifier
+
+A Next.js application that helps users tailor their existing CV to better match the job description they're applying for. The app also generates a matching cover letter based on the refined CV and job description.
+
+## Features
+
+- **CV Upload**: Upload your current CV in various formats (PDF, DOCX, TXT, HTML)
+- **Job Description Entry**: Paste in the job description you're targeting
+- **AI-Powered Tailoring**: Automatically refine your CV to better match the job requirements
+- **Cover Letter Generation**: Create a matching cover letter based on your tailored CV and the job description
+- **Template Selection**: Choose from multiple CV templates before downloading
+- **Supabase Integration**: Authentication, file storage, and user preferences (to be implemented)
+
+## Technologies Used
+
+- **Next.js**: Frontend and API routes
+- **Tailwind CSS**: Styling
+- **OpenAI API**: CV tailoring and cover letter generation
+- **Supabase**: Authentication and database (to be implemented)
+- **React Dropzone**: File uploads
+- **PDF/DOCX Parsing**: Extract content from various file formats
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 14+ and npm/yarn
+- Supabase account
+- OpenAI API key
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```
+   git clone https://github.com/goodness273/cvmodifier.git
+   cd cvmodifier
+   ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   OPENAI_API_KEY=your_openai_api_key
+   ```
 
-## Deploy on Vercel
+4. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+- `/src/app`: Next.js application routes
+- `/src/components`: React components for the UI
+- `/src/lib`: Utility functions and services
+- `/src/api`: API route handlers
+- `/public`: Static assets
+
+## Deployment
+
+This application can be deployed to Vercel or any other platform that supports Next.js applications.
+
+## Future Enhancements
+
+- User authentication and profile management
+- Saved CV and job description history
+- More CV templates
+- Improved CV parsing and formatting
+- Enhanced AI tailoring algorithms
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
