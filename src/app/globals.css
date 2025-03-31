@@ -1,8 +1,39 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --primary: #0070f3;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000000;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #0070f3;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #0070f3;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ffffff;
+  --border: #333333;
+  --input: #333333;
+  --ring: #0070f3;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
 
 @theme inline {
